@@ -118,8 +118,14 @@ We propose a Bayesian framework for assessing performance characteristics of bla
 \section{Introduction}
 
 %Machine learning prediction models are now being widely applied in areas such as consumer products, medicine, transportation, engineering, and more.
+<<<<<<< HEAD
 Machine learning prediction models, particularly deep learning models, are increasingly being deployed operationally across a wide range of application areas,  ranging from diagnosis of medical images \cite{kermany2018identifying}, to autonomous driving \cite{du2017fused}, to speech recognition \cite{hinton2012deep}.
 Going forward there is increasing interest in pushing machine learning prediction models into everyday use, and software systems with embedded machine learning components are becoming commonplace.
+=======
+%Machine learning prediction models, particularly deep learning models, are increasingly being deployed operationally across a wide range of application areas such as   diagnosis of medical images \cite{kermany2018identifying}, to autonomous driving \cite{du2017fused}, to speech recognition \cite{hinton2012deep}.
+ 
+There is increasing interest in pushing deep learning models into everyday use in application areas ranging from   diagnosis of medical images \cite{kermany2018identifying} to autonomous driving \cite{du2017fused}. Going foward, software systems with embedded machine learning components will be relatively commonplace.  
+>>>>>>> origin/overleaf-2019-04-26-2141
 %A vast number of embedded machine learning predictors will be deployed (and are already) in our mobile phones, in our vehicles, in our home energy management systems, in our hospitals, and so on.
 Many of these machine learning predictors will in effect be black-boxes from the perspective of  the humans that are using them. For example, the predictive model may have been developed remotely by some commercial entity  and the predictor may be hosted as a  service in the cloud  \cite{sanyal2018tapas}.
 %\robby{Too many parentheses. Maybe omit e.g. and just cite.}
@@ -127,33 +133,36 @@ In addition, for a variety of reasons (legal, cost, industry competition), the h
 
 In this context it is increasingly important to develop techniques that can provide accurate and robust assessments of the quality of a model's predictions.
 However, it is well-known that the ``self-confidence" estimates provided by machine learning predictors can often be quite unreliable and miscalibrated \cite{zadrozny2002transforming,kull2017a}.
+<<<<<<< HEAD
 In particular, complex models such as deep networks with high-dimensional inputs $\ux$ (such as images or text) are often significantly overconfident \cite{gal2016dropout, guo2017calibration,lakshminarayanan2017simple,kuleshov2018accurate, keren2018calibrated}.
+=======
+In particular, complex models such as deep networks with high-dimensional inputs $\ux$ (such as images or text) can be significantly overconfident in practice \cite{gal2016dropout, guo2017calibration,lakshminarayanan2017simple,kuleshov2018accurate, keren2018calibrated}.  
+>>>>>>> origin/overleaf-2019-04-26-2141
 
-{\it Independent assessment} of accuracy and confidence for a predictor (rather than self-reported confidence or recalibration) will likely become increasingly important in the future.
-By independent we mean assessment that is carried out independently from training procedures, perhaps by different individuals on different data, in a manner similar to the assessments of commercial products carried out by  regulatory agencies.
-Reasons for independent assessment include the need for  building trust on the part of a human user of model predictions,  regulatory or legal reasons that may mandate independent assessment of models, or situations where the predictor is being used in an environment $p(\ux, y)$ which is different in an unknown way to the joint distribution in the environment that the model was trained on.
+{\it Independent assessment} of accuracy and confidence for a predictor (rather than self-reported confidence or recalibration) will likely become increasingly important in the future. By independent we mean assessment that is carried out independently from training procedures, perhaps by individuals/organizations not involved in training the model, in a manner similar to the assessments of commercial products carried out by  regulatory agencies.
+Reasons for independent assessment include the need for  building trust on the part of a human user of model predictions,  regulatory or legal reasons that may mandate independent assessment of models, or situations where the predictor is being used in an environment $p(\ux, y)$ which is different to the joint distribution characterizing the training environment for the model.
 %$q(\ux, y)$ it was trained on.
 %\robby{Omit $p$ and $q$ - don't need math symbols if they are undefined.}
 
-In this workshop paper we present early results on the development of Bayesian approaches for independent assessment of the quality of black-box predictors, focusing on accuracy and calibration error for classification models.
+In this workshop paper we present early results on the development of Bayesian approaches for independent assessment of the quality of black-box predictors, focusing on accuracy and calibration bias for classification models.
 We develop a number of concepts that underlie our proposed framework and illustrate the potential approach using image and text classification datasets.
 We view our paper as preliminary work that should spur further discussion and interest among attendees of this workshop.
 
 
 \section{Related Work}
 
-While there is plenty of prior work in machine learning on calibration and recalibration methods for classification models, there is relatively little work on quantifying uncertainty in this context.
-Some very recent work (of which we just became aware before submission of this paper) is that of \cite{vaicenavicius19a} who propose a general framework for evaluation of classification model calibration, including the use of bootstrap to obtain confidence intervals on the degree of miscalibration of a model, building on earlier work that also proposed the bootstrap in a calibration context \cite{brocker2007increasing}.
-This paper could be viewed as the Bayesian alternative to the more frequentist perspective proposed in \cite{vaicenavicius19a}.
-In addition, we go beyond just calibration measures and also statements related to classifier accuracy and assessing uncertainty about such statements from a Bayesian perspective.
+While there is plenty of prior work in machine learning on calibration and recalibration methods for classification models, there is relatively little work on {\bf quantifying uncertainty} in this context.
+Some very recent work (of which we just became aware before submission of this paper) is that of \citet{vaicenavicius19a} who propose a general framework for evaluation of classification model calibration, including the use of bootstrap to obtain confidence intervals on the degree of miscalibration of a model. Their approach builds on earlier work that also proposed the bootstrap in a calibration context \cite{brocker2007increasing}. Our paper can be viewed as the Bayesian alternative to the more frequentist perspective proposed in \citet{vaicenavicius19a}.
+In addition, we go beyond calibration and also provide a framework for Bayesian assessment of classifier accuracy in various forms.
 
 
-\section{Framework}
+\section{Framework and Notation}
 
 Consider a classification problem with a feature space $\ux$ and a class label $y$ taking $K$ values, e.g., classifying image pixels $\ux$ into one of $K$ classes.
 We have a prediction model $M$ that has already been trained on training data and that makes predictions $\hat{y}_M \in \{1, \ldots, K\}$ given a feature vector $\ux$.
-The model can also produce numerical scores per class reflecting its confidence, typically in the form of a set of class probabilities $\hat{p}_M(y = k | \ux), k = 1,\ldots,K$.
+We assume that the model can also produce numerical scores per class reflecting its confidence, typically in the form of a set of class probabilities $\hat{p}_M(y = k | \ux), k = 1,\ldots,K$.
 These scores or probabilities in general need not be calibrated, i.e., they need not match the true probabilities $p(y=k | \ux)$.
+<<<<<<< HEAD
 The problem we focus on is Bayesian estimation of the performance of a model $M$ on data drawn from some distribution $p(\ux,y)$, a distribution that need not be the same as the distribution the model was trained on.
 %or unnormalized $z_k(\ux)$ (unnormalized), $1 \le k \le K$---
 
@@ -168,9 +177,26 @@ The predictions themselves can come from any black-box model (including Bayesian
 
 We will use $k^* = \arg \max_k \hat{p}_M(y = k | \ux)$ to denote the model $M$'s label prediction when the input is $\ux$.
 We assume that the prediction model implements a deterministic mapping from the input space $\ux$ to $k^*$ (and for convenience that ties in the model's class scores $\hat{p}_M(y = k | \ux)$ are resolved deterministically).
+=======
+
+We focus on the problems of Bayesian estimation of the performance of a model $M$ on future data drawn from some distribution $p(\ux,y)$.
+%a distribution that need not be the same as the distribution the model was trained on. 
+%or unnormalized $z_k(\ux)$ (unnormalized), $1 \le k \le K$--- 
+We are interested in the situation where the model $M$ is a black-box, where we can observe the inputs $\ux$ and the outputs $\hat{p}_M(y = k | \ux)$, but don't have any other information about the inner-workings of $M$. 
+%and the model $M$'s parameters are fixed.
+%we are a ``consumer" of a prediction model $M$  and don't have any way to update it. 
+This is likely to be an increasingly common scenario as machine learning models are developed as a software service and deployed across many applications. Rather than learning a model we want to learn about the characteristics of a fixed model.
+While our assessment framework is Bayesian, 
+%it is different to the usual notion of Bayesian deep learning in the literature: we assume that the model's predictions are fixed and not changeable and we are only interested in assessment.
+the prediction scores could be coming from any black-box model (including both Bayesian or non-Bayesian predictive models).
+
+  
+Let $k^* = \arg \max_k \hat{p}_M(y = k | \ux)$ denote the model $M$'s label prediction when the input is $\ux$.
+We assume that the prediction model implements a deterministic mapping from the input space $\ux$ to $k^*$ (and for convenience that ties in the model's class scores $\hat{p}_M(y = k | \ux)$ are resolved deterministically).  
+>>>>>>> origin/overleaf-2019-04-26-2141
 
 The input space $\ux$ is partitioned by the model into $K$ decision regions $\mbox{R}_{k^*},  k^* = 1,\ldots,K$.
-We can define conditional densities such as $p(\ux | k^*)$, which corresponds to the (normalized) density of $\ux$ conditioned on the fact that class $k^*$ is predicted by the model $M$, i.e., that $\ux \in \mbox{R}_k$.
+We can define $K$ corresponding conditional densities  $p(\ux | k^*)$, which are the (normalized) densities of $\ux$ conditioned on the fact that class $k^*$ is predicted by the model $M$, i.e., that $\ux \in \mbox{R}_k$.
 
 
 We define $s_M(\ux) = \hat{p}_M(y = k^*| \ux) = \max_k \hat{p}_M(y = k | \ux)$ as the {\bf score} of the model as a function of $\ux$, i.e., the class probability that the model produces for its prediction $k^*$  given input $\ux$.
@@ -179,15 +205,16 @@ Under this notation, an expression such as $E_{p(\ux | k^*)}[s_M(\ux)]$ can be i
     E_{p(\ux | k^*)}[s_M(\ux)] \ = \ \int s_M(\ux) p(\ux | k^*) d\ux
 \]
 
+\padhraic{If we have time and space it would be very nice to have a figure here that illustrates these concepts, e.g., for a 1d $x$ with 2 classes}
 
 \section{Local and Classwise Accuracy and Calibration Error}
 
-The {\bf local accuracy} of a model can be defined locally at any point in $\ux$ as $A(\ux) = p(y = k^*| \ux)$ where $p(y | \ux)$ is the true uncertainty in $y$ conditioned on $\ux$.
+The {\bf local accuracy} of a model can be defined at any input point $\ux$ as $A(\ux) = p(y = k^*| \ux)$ where $p(y | \ux)$ is the true uncertainty in $y$ conditioned on $\ux$.
 %\robby{Not sure what $p(.. | \ux)$ means.}
-The expected accuracy of the model over the whole $\ux$ space is $E_{p(\ux)}[p(y = k^*| \ux)] = \int p(y = k^*| \ux) p(\ux) d\ux$.
+In turn, the expected accuracy of the model over the whole $\ux$ space is $E_{p(\ux)}[p(y = k^*| \ux)] = \int p(y = k^*| \ux) p(\ux) d\ux$.
 In machine learning this is typically estimated empirically on a test data set by drawing $S$ samples randomly from $p(\ux,y)$ and computing $\frac{1}{S} \sum_{i=1}^S I(y_i, k_i^*)$ where $k_i^*$ is the class predicted by the model given $\ux_i$.
 
-We can also define the {\bf local calibration error} $CE(\ux)$ (see also \cite{vaicenavicius19a} of a prediction model as a function of $\ux$.
+We can also define the {\bf local calibration error} $CE(\ux)$ (see also \citet{vaicenavicius19a}) of a prediction model as a function of $\ux$.
 $CE(\ux)$ is the difference between the model's accuracy $A(\ux)$ and the model's own estimate of its accuracy at $\ux$, $p_M(y = k^*| \ux)$, i.e.,
 \[
     CE(\ux) \ = \  \Delta\bigl(\ p_M(y = k^*| \ux), \  p(y =k^*| \ux) \  \bigr),
@@ -215,12 +242,13 @@ The Bayesian framework we propose could be extended to Bayesian estimation of su
 
 \section{Bayesian Estimation of Accuracy and Calibration}\label{sec:bayesian}
 Say we want to estimate the accuracy ${A}_{k^*}$ per predicted class $k^*$ from data. To estimate the integral empirically, we can sample $\ux,y$ pairs from the conditional distribution $p(x,y | k^*)$.
-A standard approach in evaluation of classifier models would be to treat ${A}_{k^*}$ as an unknown Bernoulli parameter with ``draws" $I(y_i, k^*) \in \{0,1\}$ and compute a frequency-based (maximum likelihood) estimate
+A standard approach in evaluation of classifier models would be to treat ${A}_{k^*}$ as an unknown Bernoulli parameter, with draws $(\ux_i,y_i)$ leading to binary outcomes $I(y_i, k^*) \in \{0,1\}$, allowing computation of a frequency-based (maximum likelihood) estimate:
 %\begin{equation}
 \[
 \hat{A}_{k^*} \ = \  \frac{1}{S} \sum_{i=1}^S A(\ux_i)
  \ = \ \frac{1}{S} \sum_{i=1}^S I(y_i, k^*), \ \ \ \ 1 \le k^* \le K
 \]
+<<<<<<< HEAD
 %\end{equation}
 where $k^*$ is the model's prediction for each of the $\ux_i$'s by definition.
 However, given a finite amount of data for evaluation, and in situations where $K$ may be large, is natural to consider Bayesian estimation in this context, allowing for  uncertainty our inferences about quantities such as ${A}_{k^*}$.
@@ -228,17 +256,34 @@ In particular, we can put a Beta prior $Beta(\alpha, \beta)$ on ${A}_{k^*}$, mod
 
 For calibration error, Bayesian estimation is a little more complex.
 The frequency-based estimate of expected calibration error per class is
+=======
+%\end{equation} 
+where $k^*$ is the model's prediction for each of the $\ux_i$'s.
+It is natural to consider Bayesian estimation in this context, especially in situations where there is not a large amount of labeled data available for evaluation and in situations where $K$ may be large,  allowing for  uncertainty in our inferences about quantities such as ${A}_{k^*}$.
+In particular, we can put a Beta prior $Beta(\alpha, \beta)$ on ${A}_{k^*}$, model the draws $I(y_i, k^*)$ with a binomial likelihood, and produce Beta posteriors for each ${A}_{k^*}, k^* = 1,\ldots,K$
+ 
+For calibration, %Bayesian estimation is a little more complex. 
+sampling again from  $p(x,y | k^*)$,
+the frequency-based estimate of expected calibration error per class can be written as  
+>>>>>>> origin/overleaf-2019-04-26-2141
 \begin{align*}
 \hat{CE}_{k^*} & \ = \  \frac{1}{S} \sum_{i=1}^S CE(\ux_i), \ \  \ \ \ \ 1 \le k^* \le K \\
  &  \ = \  \frac{1}{S} \sum_{i=1}^S \Delta\bigl(p_M(y = k^*| \ux), \  p(y =k^*| \ux)  \bigr)
 \end{align*}
+<<<<<<< HEAD
 The calibration error $\hat{CE}_{k^*}$ is bounded between 0 and 1 so it is natural to think of a Beta prior for $CE$ as we did for accuracy.
 However, here we don't have binary draws (as we had with the indicator function for accuracy) but instead have a real-valued (bounded) quantity $\Delta(  )$ making Bayesian analysis less straightforward.
 In this paper, for simplicity, we focus just on the {\bf calibration bias}  per class, where  $\Delta( ) = p_M(y = k^*| \ux) - p(y =k^*| \ux)$, in which case
 $CE_{k^*} = %E_{p(\ux|k^*)}[ p_M(y = k^*| \ux) - A(\ux) ] =
+=======
+%The calibration error $\hat{CE}_{k^*}$ is bounded between 0 and 1 so it is natural to think of a Beta prior for $CE$ as we did for accuracy. However, here we don't have binary draws (as we had with the indicator function for accuracy) but instead have a real-valued (bounded) quantity $\Delta(  )$ making Bayesian analysis less straightforward.
+For simplicity, we focus just on the {\bf calibration bias}  per class, where  $\Delta$ is defined as $p_M(y = k^*| \ux) - p(y =k^*| \ux)$, which in turn leads to
+$CE_{k^*} = %E_{p(\ux|k^*)}[ p_M(y = k^*| \ux) - A(\ux) ] = 
+>>>>>>> origin/overleaf-2019-04-26-2141
 E_{p(\ux|k^*)}[ p_M(y = k^*| \ux)] \ - \  {A}_{k^*} $.
-\robby{Notsure what $\Delta(  )$ means.}
-We will make the assumption that the uncertainty in estimating $CE_{k^*}$ will be dominated by the second term, ${A}_{k^*}$ since it requires labeled examples, whereas the first term (the average score for the model when class $k^*$ is predicted) can be estimated from unlabeled examples alone and thus, one can drive uncertainty about this term to zero with enough unlabeled data. Thus, for the case of Bayesian estimation of calibration bias, we will assume that the problem can be reduced to that of Bayesian estimation of accuracy.
+%\robby{Notsure what $\Delta(  )$ means.}
+We will make the assumption that the uncertainty in estimating $CE_{k^*}$ will be dominated by the second term, ${A}_{k^*}$ since it requires labeled examples, whereas the first term (the average score for the model when class $k^*$ is predicted) can be estimated from unlabeled examples alone and thus, one can drive uncertainty about this term to zero with enough unlabeled data, reducing the problem to that of Bayesian estimation of accuracy.
+%Thus, for the case of Bayesian estimation of calibration bias, we will assume that the problem can be reduced to that of Bayesian estimation of accuracy.
 
 
 
