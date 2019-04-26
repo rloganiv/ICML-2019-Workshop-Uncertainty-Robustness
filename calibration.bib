@@ -1,0 +1,1311 @@
+
+ @preamble{ " \newcommand{\noop}[1]{} " }
+
+
+%-----------------------------------------------------------
+% PAPERS ON UNCERTAINTY IN CALIBRATION
+
+@article{smith1997maintenance,
+  title={The maintenance of uncertainty},
+  author={Smith, Leonard A},
+  journal={Nonlinearity in geophysics and astrophysics},
+  volume={133},
+  pages={177--246},
+  year={1997}
+}
+
+@article{brocker2007increasing,
+  title={Increasing the reliability of reliability diagrams},
+  author={Br{\"o}cker, Jochen and Smith, Leonard A},
+  journal={Weather and forecasting},
+  volume={22},
+  number={3},
+  pages={651--661},
+  year={2007}
+}
+
+
+
+@InProceedings{vaicenavicius19a,
+  title = 	 {Evaluating model calibration in classification},
+  author = 	 {Vaicenavicius, Juozas and Widmann, David and Andersson, Carl and Lindsten, Fredrik and Roll, Jacob and Sch\"{o}n, Thomas},
+  booktitle = 	 {AI Statistics 2019/Proceedings of Machine Learning Research},
+  pages = 	 {3459--3467},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Sugiyama, Masashi},
+  volume = 	 {89},
+  series = 	 {Proceedings of Machine Learning Research}, 
+  publisher = 	 {PMLR} 
+}
+
+
+
+
+%-----------------------------------------------------------
+% PAPERS ON CALIBRATION
+
+% Bayesian perspective
+@article{dawid1982well,
+  title={The well-calibrated {B}ayesian},
+  author={Dawid, A Philip},
+  journal={Journal of the American Statistical Association},
+  volume={77},
+  number={379},
+  pages={605--610},
+  year={1982},
+  publisher={Taylor \& Francis Group}
+}
+
+@incollection{platt1999probabilistic,
+  title={Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods},
+  author={Platt, John},
+  booktitle={Advances in Large Margin Classifiers},
+  volume={10},
+  number={3},
+  pages={61--74},
+  year={1999},
+  publisher={Cambridge, MA}
+}
+
+@inproceedings{kull2017a,
+  title={Beta calibration: a well-founded and easily implemented improvement on logistic calibration for binary classifiers},
+  author={Kull, Meelis and Filho, Telmo Silva  and Flach, Peter},
+  booktitle={Proceedings of the 20th International Conference on Artificial Intelligence and Statistics},
+  pages={623--631},
+  year={2017},
+  editor={Aarti Singh and Jerry Zhu},
+  volume={54},
+  series={Proceedings of Machine Learning Research} 
+}
+
+@inproceedings{zadrozny2002transforming,
+  title={Transforming classifier scores into accurate multiclass probability estimates},
+  author={Zadrozny, Bianca and Elkan, Charles},
+  booktitle={Proceedings of the Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={694--699},
+  year={2002},
+  organization={ACM}
+}
+
+
+@inproceedings{zadrozny2001obtaining,
+  title={Obtaining calibrated probability estimates from decision trees and naive {B}ayesian classifiers},
+  author={Zadrozny, Bianca and Elkan, Charles},
+  booktitle={Proceedings of the International Conference on Machine Learning (ICML)}, 
+  pages={609--616},
+  year={2001},
+  organization={Citeseer}
+}
+
+@inproceedings{niculescu2005predicting,
+  title={Predicting good probabilities with supervised learning},
+  author={Niculescu-Mizil, Alexandru and Caruana, Rich},
+  booktitle={Proceedings of the 22nd International Conference on Machine Learning},
+  pages={625--632},
+  year={2005},
+  organization={ACM}
+}
+
+@inproceedings{naeini2015obtaining,
+  title={Obtaining Well Calibrated Probabilities Using {B}ayesian Binning},
+  author={Naeini, Mahdi Pakdaman and Cooper, Gregory F and Hauskrecht, Milos},
+  booktitle={Proceedings of the AAAI Conference},
+  pages={2901--2907},
+  year={2015}
+}
+
+@inproceedings{lakshminarayanan2017simple,
+  title={Simple and scalable predictive uncertainty estimation using deep ensembles},
+  author={Lakshminarayanan, Balaji and Pritzel, Alexander and Blundell, Charles},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={6402--6413},
+  year={2017}
+}
+
+@inproceedings{guo2017calibration,
+  title={On calibration of modern neural networks},
+  author={Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q},
+  booktitle={Proceedings of the 34th International Conference on Machine Learning-Volume 70},
+  pages={1321--1330},
+  year={2017},
+  organization={JMLR.org}
+}
+
+@inproceedings{gal2016dropout,
+  title={Dropout as a Bayesian approximation: Representing model uncertainty in deep learning},
+  author={Gal, Yarin and Ghahramani, Zoubin},
+  booktitle={International Conference on Machine Learning},
+  pages={1050--1059},
+  year={2016}
+}
+
+
+
+
+@inproceedings{gal2015dropout,
+  title={Dropout as a Bayesian approximation: Insights and applications},
+  author={Gal, Yarin and Ghahramani, Zoubin},
+  booktitle={Deep Learning Workshop, ICML},
+  volume={1},
+  pages={2},
+  year={2015}
+}
+
+@article{malinin2018predictive,
+  title={Predictive Uncertainty Estimation via Prior Networks},
+  author={Malinin, Andrey and Gales, Mark},
+  journal={arXiv preprint arXiv:1802.10501},
+  year={2018}
+}
+
+@article{papernot2018deep,
+  title={Deep k-nearest neighbors: Towards confident, interpretable and robust deep learning},
+  author={Papernot, Nicolas and McDaniel, Patrick},
+  journal={arXiv preprint arXiv:1803.04765},
+  year={2018}
+}
+
+@inproceedings{kuleshov2018accurate,
+  title={Accurate Uncertainties for Deep Learning Using Calibrated Regression},
+  author={Kuleshov, Volodymyr and Fenner, Nathan and Ermon, Stefano},
+  booktitle={Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  year={2018}
+}
+
+@article{keren2018calibrated,
+  title={Calibrated Prediction Intervals for Neural Network Regressors},
+  author={Keren, Gil and Cummins, Nicholas and Schuller, Bj{\"o}rn},
+  journal={arXiv preprint arXiv:1803.09546},
+  year={2018}
+}
+
+
+% online calibration
+@inproceedings{kuleshov2017estimating,
+  title={Estimating Uncertainty Online Against an Adversary},
+  author={Kuleshov, Volodymyr and Ermon, Stefano},
+  booktitle={Proceedings of the AAAI Conference},
+  pages={2110--2116},
+  year={2017}
+}
+
+% application of dropout uncertainty to a real medical imaging problem
+@article{leibig2017leveraging,
+  title={Leveraging uncertainty information from deep neural networks for disease detection},
+  author={Leibig, Christian and Allken, Vaneeda and Ayhan, Murat Se{\c{c}}kin and Berens, Philipp and Wahl, Siegfried},
+  journal={Scientific reports},
+  volume={7},
+  number={1},
+  pages={17816},
+  year={2017},
+  publisher={Nature Publishing Group}
+}
+
+@inproceedings{zhu2017deep,
+  title={Deep and confident prediction for time series at {U}ber},
+  author={Zhu, Lingxue and Laptev, Nikolay},
+  booktitle={Data Mining Workshops (ICDMW), 2017 IEEE International Conference on},
+  pages={103--110},
+  year={2017},
+  organization={IEEE}
+}
+
+
+@inproceedings{ayhan2018test,
+  title={Test-time Data Augmentation for Estimation of Heteroscedastic Aleatoric Uncertainty in Deep Neural Networks},
+  author={Ayhan, Murat Seckin and Berens, Philipp},
+  booktitle={1st Conference on Medical Imaging with Deep Learning (MIDL 2018)},
+  year={2018}
+}
+
+@article{wang2018test,
+  title={Test-time augmentation with uncertainty estimation for deep learning-based medical image segmentation},
+  author={Wang, Guotai and Li, Wenqi and Aertsen, Michael and Deprest, Jan and Ourselin, Sebastien and Vercauteren, Tom},
+  booktitle={1st Conference on Medical Imaging with Deep Learning (MIDL 2018)},
+  year={2018}
+}
+
+
+%
+
+@inproceedings{pearce2018high,
+  title={High-Quality Prediction Intervals for Deep Learning: A Distribution-Free, Ensembled Approach},
+  author={Pearce, Tim and Zaki, Mohamed and Brintrup, Alexandra and Neely, Andy},
+  booktitle={Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  year={2018}
+}
+
+
+%-----------------------------------------------------------
+% PAPERS ON "OUT OF DISTRIBUTION" DETECTION
+@article{devries2018learning,
+  title={Learning Confidence for Out-of-Distribution Detection in Neural Networks},
+  author={DeVries, Terrance and Taylor, Graham W},
+  journal={arXiv preprint arXiv:1802.04865},
+  year={2018}
+}
+
+@article{li2018mathcal,
+  title={G-Distillation: Reducing Overconfident Errors on Novel Samples},
+  author={Li, Zhizhong and Hoiem, Derek},
+  journal={arXiv preprint arXiv:1804.03166},
+  year={2018}
+}
+
+@article{jiang2018trust,
+  title={To Trust Or Not To Trust A Classifier},
+  author={Jiang, Heinrich and Kim, Been and Gupta, Maya},
+  journal={arXiv preprint arXiv:1805.11783},
+  year={2018}
+}
+
+
+@inproceedings{hendrycks2017baseline,
+  title={A baseline for detecting misclassified and out-of-distribution examples in neural networks},
+  author={Hendrycks, Dan and Gimpel, Kevin},
+  booktitle={International Conference on Learning Representations},
+  year={2017}
+}
+
+@article{shafaei2018does,
+  title={Does Your Model Know the Digit 6 Is Not a Cat? A Less Biased Evaluation of" Outlier" Detectors},
+  author={Shafaei, Alireza and Schmidt, Mark and Little, James J},
+  journal={arXiv preprint arXiv:1809.04729},
+  year={2018}
+}
+
+
+%-----------------------------------------------------------
+% ALEATORIC AND EPISTEMIC UNCERTAINTY
+
+
+@inproceedings{kendall2017uncertainties,
+  title={What uncertainties do we need in {B}ayesian deep learning for computer vision?},
+  author={Kendall, Alex and Gal, Yarin},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={5574--5584},
+  year={2017}
+}
+
+@article{hora1996aleatory,
+  title={Aleatory and epistemic uncertainty in probability elicitation with an example from hazardous waste management},
+  author={Hora, Stephen C},
+  journal={Reliability Engineering \& System Safety},
+  volume={54},
+  number={2-3},
+  pages={217--223},
+  year={1996},
+  publisher={Elsevier}
+}
+
+@article{o2004dicing,
+  title={Dicing with the unknown},
+  author={O'Hagan, Tony},
+  journal={Significance},
+  volume={1},
+  number={3},
+  pages={132--133},
+  year={2004},
+  publisher={Wiley Online Library}
+}
+
+@article{senge2014reliable,
+  title={Reliable classification: Learning classifiers that distinguish aleatoric and epistemic uncertainty},
+  author={Senge, Robin and B{\"o}sner, Stefan and Dembczy{\'n}ski, Krzysztof and Haasenritter, J{\"o}rg and Hirsch, Oliver and Donner-Banzhoff, Norbert and H{\"u}llermeier, Eyke},
+  journal={Information Sciences},
+  volume={255},
+  pages={16--29},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@inproceedings{mcallister2017concrete,
+  title={Concrete problems for autonomous vehicle safety: Advantages of {B}ayesian deep learning},
+  author={McAllister, Rowan and Gal, Yarin and Kendall, Alex and Van Der Wilk, Mark and Shah, Amar and Cipolla, Roberto and Weller, Adrian Vivian},
+  year={2017},
+  organization={Proceedings of the International Joint Conference on Artificial Intelligence, IJCAI 2017}
+}
+
+
+%-----------------------------------------------------------
+% REPRESENTING UNCERTAINTY IN PREDICTIONS
+
+% See Chapter 12....
+@book{schweder2016confidence,
+  title={Confidence, Likelihood, Probability},
+  author={Schweder, Tore and Hjort, Nils Lid},
+  volume={41},
+  year={2016},
+  publisher={Cambridge University Press}
+}
+
+% See Chapter 3 for classification with GPs
+@book{rasmussen2006gaussian,
+  title={Gaussian processes for machine learning},
+  author={Rasmussen, Carl Edward and Williams, Christopher KI},
+  publisher={The MIT Press}, 
+  year={2006}
+}
+
+%-----------------------------------------------------------
+% PAPERS ON ACTIVE LEARNING
+@article{lowell2018transferable,
+  title={How transferable are the datasets collected by active learners?},
+  author={Lowell, David and Lipton, Zachary C and Wallace, Byron C},
+  journal={arXiv preprint arXiv:1807.04801},
+  year={2018}
+}
+
+%-----------------------------------------------------------
+% PAPERS ON EXPLANATIONS/INTERPRETABILITY
+@article{poursabzi2018manipulating,
+  title={Manipulating and measuring model interpretability},
+  author={Poursabzi-Sangdeh, Forough and Goldstein, Daniel G and Hofman, Jake M and Vaughan, Jennifer Wortman and Wallach, Hanna},
+  journal={arXiv preprint arXiv:1802.07810},
+  year={2018}
+}
+
+@article{narayanan2018humans,
+  title={How do Humans Understand Explanations from Machine Learning Systems? An Evaluation of the Human-Interpretability of Explanation},
+  author={Narayanan, Menaka and Chen, Emily and He, Jeffrey and Kim, Been and Gershman, Sam and Doshi-Velez, Finale},
+  journal={arXiv preprint arXiv:1802.00682},
+  year={2018}
+}
+
+%-----------------------------------------------------------
+% PAPERS ON THE HUMAN-IN-THE-LOOP INTERACTIONS/TRADEOFFS
+
+% deep RL with human feedback
+% Comment: our proposed work is more focused on black-box predictive modeling and communication with the human
+@inproceedings{christiano2017deep,
+  title={Deep reinforcement learning from human preferences},
+  author={Christiano, Paul F and Leike, Jan and Brown, Tom and Martic, Miljan and Legg, Shane and Amodei, Dario},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={4299--4307},
+  year={2017}
+}
+
+% AI Safety overview
+@article{everitt2018agi,
+  title={AGI Safety Literature Review},
+  author={Everitt, Tom and Lea, Gary and Hutter, Marcus},
+  journal={arXiv preprint arXiv:1805.01109},
+  year={2018}
+}
+
+
+% see page 18 of this paper which broadly discusses AI systems interacting with humans
+@article{amodei2016concrete,
+  title={Concrete problems in {AI} safety},
+  author={Amodei, Dario and Olah, Chris and Steinhardt, Jacob and Christiano, Paul and Schulman, John and Man{\'e}, Dan},
+  journal={arXiv preprint arXiv:1606.06565},
+  year={2016}
+}
+ 
+
+@article{chakraborti2018algorithms,
+  title={Algorithms for the Greater Good! On Mental Modeling and Acceptable Symbiosis in Human-AI Collaboration},
+  author={Chakraborti, Tathagata and Kambhampati, Subbarao},
+  journal={arXiv preprint arXiv:1801.09854},
+  year={2018}
+}
+
+@article{lage2018human,
+  title={Human-in-the-Loop Interpretability Prior},
+  author={Lage, Isaac and Ross, Andrew Slavin and Kim, Been and Gershman, Samuel J and Doshi-Velez, Finale},
+  journal={arXiv preprint arXiv:1805.11571},
+  year={2018}
+}
+
+@inproceedings{saunders2018trial,
+  title={Trial without Error: Towards Safe Reinforcement Learning via Human Intervention},
+  author={Saunders, William and Sastry, Girish and Stuhlmueller, Andreas and Evans, Owain},
+  booktitle={Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems},
+  pages={2067--2069},
+  year={2018},
+  organization={International Foundation for Autonomous Agents and Multiagent Systems}
+}
+
+
+%-----------------------------------------------------------
+% ADVERSARIAL LEARNING  
+@inproceedings{papernot2016limitations,
+  title={The limitations of deep learning in adversarial settings},
+  author={Papernot, Nicolas and McDaniel, Patrick and Jha, Somesh and Fredrikson, Matt and Celik, Z Berkay and Swami, Ananthram},
+  booktitle={Security and Privacy (EuroS\&P), 2016 IEEE European Symposium on},
+  pages={372--387},
+  year={2016},
+  organization={IEEE}
+}
+
+@article{goodfellow2018making,
+  title={Making machine learning robust against adversarial inputs},
+  author={Goodfellow, Ian and McDaniel, Patrick and Papernot, Nicolas},
+  journal={Communications of the ACM},
+  volume={61},
+  number={7},
+  pages={56--66},
+  year={2018},
+  publisher={ACM}
+}
+
+
+%-----------------------------------------------------------
+% ASSESSMENT/TESTING OF ML PREDICTORS  
+
+@article{groce2014you,
+  title={You are the only possible oracle: Effective test selection for end users of interactive machine learning systems},
+  author={Groce, Alex and Kulesza, Todd and Zhang, Chaoqiang and Shamasunder, Shalini and Burnett, Margaret and Wong, Weng-Keen and Stumpf, Simone and Das, Shubhomoy and Shinsel, Amber and Bice, Forrest and others},
+  journal={IEEE Transactions on Software Engineering},
+  volume={40},
+  number={3},
+  pages={307--323},
+  year={2014},
+  publisher={IEEE}
+}
+
+@inproceedings{pei2017deepxplore,
+  title={Deepxplore: Automated whitebox testing of deep learning systems},
+  author={Pei, Kexin and Cao, Yinzhi and Yang, Junfeng and Jana, Suman},
+  booktitle={Proceedings of the 26th Symposium on Operating Systems Principles},
+  pages={1--18},
+  year={2017},
+  organization={ACM}
+}
+
+@inproceedings{wicker2018feature,
+  title={Feature-guided black-box safety testing of deep neural networks},
+  author={Wicker, Matthew and Huang, Xiaowei and Kwiatkowska, Marta},
+  booktitle={International Conference on Tools and Algorithms for the Construction and Analysis of Systems},
+  pages={408--426},
+  year={2018},
+  organization={Springer}
+}
+
+
+@inproceedings{tian2018deeptest,
+  title={Deeptest: Automated testing of deep-neural-network-driven autonomous cars},
+  author={Tian, Yuchi and Pei, Kexin and Jana, Suman and Ray, Baishakhi},
+  booktitle={Proceedings of the 40th International Conference on Software Engineering},
+  pages={303--314},
+  year={2018},
+  organization={ACM}
+}
+
+@article{pei2017towards,
+  title={Towards practical verification of machine learning: The case of computer vision systems},
+  author={Pei, Kexin and Cao, Yinzhi and Yang, Junfeng and Jana, Suman},
+  journal={arXiv preprint arXiv:1712.01785},
+  year={2017}
+}
+
+@article{nushi2018accountableAI,
+  title={Towards Accountable {AI}: Hybrid Human-Machine Analyses for Characterizing System Failure},
+  author={Nushi, Besmira and Kamar, Ece, and Horvitz, Eric},
+  year={2018}
+}
+
+% legal perspective
+@article{kroll2016accountable,
+  title={Accountable algorithms},
+  author={Kroll, Joshua A and Barocas, Solon and Felten, Edward W and Reidenberg, Joel R and Robinson, David G and Yu, Harlan},
+  journal={U. Pa. L. Rev.},
+  volume={165},
+  pages={633},
+  year={2016},
+  publisher={HeinOnline}
+}
+
+ 
+%-----------------------------------------------------------
+% TRANSFER LEARNING, DOMAIN ADAPTATION, DATASET SHIFT
+
+@INPROCEEDINGS{Storkey09whentraining,
+    author = {Amos J Storkey},
+    title = {When training and test sets are different: characterising learning transfer},
+    booktitle = {In Dataset Shift in Machine Learning},
+    year = {2009},
+    pages = {3--28},
+    publisher = {MIT Press}
+}
+
+
+@article{pan2010survey,
+  title={A survey on transfer learning},
+  author={Pan, Sinno Jialin and Yang, Qiang and others},
+  journal={IEEE Transactions on knowledge and data engineering},
+  volume={22},
+  number={10},
+  pages={1345--1359},
+  year={2010},
+  publisher={Institute of Electrical and Electronics Engineers, Inc., 345 E. 47 th St. NY NY 10017-2394 USA}
+}
+
+ @inproceedings{diethe2015bayesian,
+  title={Bayesian active transfer learning in smart homes},
+  author={Diethe, Tom and Twomey, Niall and Flach, Peter},
+  booktitle={ICML Active Learning Workshop},
+  volume={2015},
+  year={2015}
+}
+
+@inproceedings{kandemir2015asymmetric,
+  title={Asymmetric transfer learning with deep gaussian processes},
+  author={Kandemir, Melih},
+  booktitle={International Conference on Machine Learning},
+  pages={730--738},
+  year={2015}
+}
+
+
+%-----------------------------------------------------------
+% PAPERS ON HUMAN TRUST, ALGORITHM AVERSION
+
+@article{dietvorst2015version,
+  title={Algorithm aversion: People erroneously avoid algorithms after seeing them err.},
+  author={Dietvorst, Berkeley J and Simmons, Joseph P and Massey, Cade},
+  journal={Journal of Experimental Psychology: General},
+  volume={144},
+  number={1},
+  pages={114},
+  year={2015},
+  publisher={American Psychological Association}
+}
+
+@article{prahl2017understanding,
+  title={Understanding algorithm aversion: When is advice from automation discounted?},
+  author={Prahl, Andrew and Van Swol, Lyn},
+  journal={Journal of Forecasting},
+  volume={36},
+  number={6},
+  pages={691--702},
+  year={2017},
+  publisher={Wiley Online Library}
+}
+
+@article{logg2018algorithm,
+  title={Algorithm Appreciation: People Prefer Algorithmic To Human Judgment},
+  author={Logg, Jennifer and Minson, Julia and Moore, Don A},
+  year={2018}
+}
+
+@article{gilbert2019human,
+  title={Human Trust Factors in Image Analysis},
+  author={Gilbert, Juan E},
+  journal={Advances in Human Error, Reliability, Resilience, and Performance},
+  pages={3},
+  year={2019},
+  publisher={Springer}
+}
+
+@incollection{yu2018trust,
+  title={Do I Trust a Machine? Differences in User Trust Based on System Performance},
+  author={Yu, Kun and Berkovsky, Shlomo and Conway, Dan and Taib, Ronnie and Zhou, Jianlong and Chen, Fang},
+  booktitle={Human and Machine Learning},
+  pages={245--264},
+  year={2018},
+  publisher={Springer}
+}
+
+@article{yeomans2016making,
+  title={Making sense of recommendations},
+  author={Yeomans, Mike and Shah, Anuj K and Mullainathan, Sendhil and Kleinberg, Jon},
+  journal={Preprint at http://scholar. harvard. edu/files/sendhil/files/recommenders55\_01. pdf},
+  year={2016}
+}
+
+%-----------------------------------------------------------
+% PAPERS ON HUMAN DECISION-MAKING, OVERCONFIDENCE
+@article{dawes1989clinical,
+  title={Clinical versus actuarial judgment},
+  author={Dawes, Robyn M and Faust, David and Meehl, Paul E},
+  journal={Science},
+  volume={243},
+  number={4899},
+  pages={1668--1674},
+  year={1989},
+  publisher={American Association for the Advancement of Science}
+}
+
+@article{dunning2018best,
+  title={The best option illusion in self and social assessment},
+  author={Dunning, David},
+  journal={Self and Identity},
+  pages={1--14},
+  year={2018},
+  publisher={Taylor \& Francis}
+}
+
+@article{kleinberg2017human,
+  title={Human decisions and machine predictions},
+  author={Kleinberg, Jon and Lakkaraju, Himabindu and Leskovec, Jure and Ludwig, Jens and Mullainathan, Sendhil},
+  journal={The quarterly journal of economics},
+  volume={133},
+  number={1},
+  pages={237--293},
+  year={2017},
+  publisher={Oxford University Press}
+}
+
+@article{rosenfeld2018predicting,
+  title={Predicting Human Decision-Making: From Prediction to Action},
+  author={Rosenfeld, Ariel and Kraus, Sarit},
+  journal={Synthesis Lectures on Artificial Intelligence and Machine Learning},
+  volume={12},
+  number={1},
+  pages={1--150},
+  year={2018},
+  publisher={Morgan \& Claypool Publishers}
+}
+
+@article{valera2018enhancing,
+  title={Enhancing the Accuracy and Fairness of Human Decision Making},
+  author={Valera, Isabel and Singla, Adish and Rodriguez, Manuel Gomez},
+  journal={arXiv preprint arXiv:1805.10318},
+  year={2018}
+}
+
+% see Intro section for discussion of fast and slow judgements
+@article{evans2018predicting,
+  title={Predicting Human Deliberative Judgments with Machine Learning},
+  author={Evans, Owain and Stuhlm{\"u}ller, Andreas and Cundy, Chris and Carey, Ryan and Kenton, Zachary and McGrath, Thomas and Schreiber, Andrew},
+  year={2018}
+}
+
+
+
+%-----------------------------------------------------------
+% DATA SETS AND  SOFTWARE
+https://www.cs.toronto.edu/~kriz/cifar.html
+@misc{krizhevsky2013,
+  author = {Krizehvsky, Alex},
+  title = {CIFAR Data Sets},
+  howpublished = "\url{https://www.cs.toronto.edu/~kriz/cifar.html}",
+  year = {2013}, 
+  note = "[Online; accessed September 21st 2018]"
+}
+
+@misc{amazon2018,
+  author = {Amazon},
+  title = {Amazon Rekognition API Documentation},
+  howpublished = "\url{https://docs.aws.amazon.com/rekognition/latest/dg/labels-detect-labels-image.html}",
+  year = {2018}, 
+  note = "[Online; accessed September 21st 2018]"
+}
+
+@misc{berkeley2018,
+  author = {Berkeley, University of California},
+  title = {Berkeley Deep Drive road object detection data},
+  howpublished = "\url{http://bdd-data.berkeley.edu/}",
+  year = {2018}, 
+  note = "[Online; accessed September 21st 2018]"
+}
+
+
+% cross/no-cross pedestrian detectors
+@article{fang2018pedestrian,
+  title={Is the Pedestrian going to Cross? Answering by 2D Pose Estimation},
+  author={Fang, Zhijie and L{\'o}pez, Antonio M},
+  journal={arXiv preprint arXiv:1807.10580},
+  year={2018}
+}
+
+@inproceedings{rasouli2017they,
+  title={Are They Going to Cross? A Benchmark Dataset and Baseline for Pedestrian Crosswalk Behavior},
+  author={Rasouli, Amir and Kotseruba, Iuliia and Tsotsos, John K},
+  booktitle={Computer Vision Workshop (ICCVW), 2017 IEEE International Conference on},
+  pages={206--213},
+  year={2017},
+  organization={IEEE}
+}
+
+ @article{ILSVRC15,
+Author = {Olga Russakovsky and Jia Deng and Hao Su and Jonathan Krause and Sanjeev Satheesh and Sean Ma and Zhiheng Huang and Andrej Karpathy and Aditya Khosla and Michael Bernstein and Alexander C. Berg and Li Fei-Fei},
+Title = {{ImageNet Large Scale Visual Recognition Challenge}},
+Year = {2015},
+journal   = {International Journal of Computer Vision (IJCV)},
+doi = {10.1007/s11263-015-0816-y},
+volume={115},
+number={3},
+pages={211-252}
+}
+
+% CIFAR reference
+@techreport{krizhevsky2009learning,
+  title={Learning multiple layers of features from tiny images},
+  author={Krizhevsky, Alex and Hinton, Geoffrey},
+  year={2009},
+  institution={Citeseer}
+}
+
+
+@inproceedings{he2016deep,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={770--778},
+  year={2016}
+}
+
+
+
+@INPROCEEDINGS{HuangDense,
+author = {G. Huang  and Z. Liu and L. v. Maaten and K. Q. Weinberger},
+booktitle = {2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+title = {Densely Connected Convolutional Networks},
+year = {2017},
+volume = {00},
+number = {},
+pages = {2261-2269},
+keywords={Training;Convolution;Network architecture;Convolutional codes;Neural networks;Road transportation}, 
+month={July}
+}
+
+@inproceedings{xie2017aggregated,
+  title={Aggregated residual transformations for deep neural networks},
+  author={Xie, Saining and Girshick, Ross and Doll{\'a}r, Piotr and Tu, Zhuowen and He, Kaiming},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on},
+  pages={5987--5995},
+  year={2017},
+  organization={IEEE}
+}
+
+@article{zagoruyko2016wide,
+  title={Wide residual networks},
+  author={Zagoruyko, Sergey and Komodakis, Nikos},
+  booktitle={British Machine Vision Conference},
+  year={2016}
+}
+
+@article{rubin2012statistical,
+  title={Statistical topic models for multi-label document classification},
+  author={Rubin, Timothy N and Chambers, America and Smyth, Padhraic and Steyvers, Mark},
+  journal={Machine learning},
+  volume={88},
+  number={1-2},
+  pages={157--208},
+  year={2012},
+  publisher={Springer}
+}
+
+@inproceedings{tai2015improved,
+  title={Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks},
+  author={Tai, Kai Sheng and Socher, Richard and Manning, Christopher D},
+  booktitle={Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  volume={1},
+  pages={1556--1566},
+  year={2015}
+}
+
+@inproceedings{socher2013recursive,
+  title={Recursive deep models for semantic compositionality over a sentiment treebank},
+  author={Socher, Richard and Perelygin, Alex and Wu, Jean and Chuang, Jason and Manning, Christopher D and Ng, Andrew and Potts, Christopher},
+  booktitle={Proceedings of the 2013 conference on empirical methods in natural language processing},
+  pages={1631--1642},
+  year={2013}
+}
+
+@inproceedings{rajpurkar2016squad,
+  title={SQuAD: 100,000+ Questions for Machine Comprehension of Text},
+  author={Rajpurkar, Pranav and Zhang, Jian and Lopyrev, Konstantin and Liang, Percy},
+  booktitle={Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing},
+  pages={2383--2392},
+  year={2016}
+}
+
+@inproceedings{rajpurkar2018squadrun,
+  author = {P. Rajpurkar and R. Jia and P. Liang},
+  booktitle = {Association for Computational Linguistics (ACL)},
+  title = {Know What You Don't Know: Unanswerable Questions for {SQuAD}},
+  year = {2018},
+}
+
+@article{DBLP:journals/corr/SeoKFH16,
+  author    = {Min Joon Seo and
+               Aniruddha Kembhavi and
+               Ali Farhadi and
+               Hannaneh Hajishirzi},
+  title     = {Bidirectional Attention Flow for Machine Comprehension},
+  journal   = {CoRR},
+  volume    = {abs/1611.01603},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1611.01603},
+  archivePrefix = {arXiv},
+  eprint    = {1611.01603},
+  timestamp = {Mon, 13 Aug 2018 16:46:34 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/SeoKFH16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{burkhardt2010database,
+  title={A Database of Age and Gender Annotated Telephone Speech.},
+  author={Burkhardt, Felix and Eckert, Martin and Johannsen, Wiebke and Stegmann, Joachim},
+  booktitle={Proceedings of the International Conference on Language Resources and Evaluation (LREC)},
+  year={2018}
+}
+
+@article{brandom_2018, title={Amazon's facial recognition matched 28 members of Congress to criminal mugshots}, url={https://www.theverge.com/2018/7/26/17615634/amazon-rekognition-aclu-mug-shot-congress-facial-recognition}, journal={The Verge}, author={Brandom, Russell}, year={2018}, month={Jul}}
+
+
+%-----------------------------------------------------------
+% HIGH PROFILE APPLICATIONS OF ML
+@article{kermany2018identifying,
+  title={Identifying medical diagnoses and treatable diseases by image-based deep learning},
+  author={Kermany, Daniel S and Goldbaum, Michael and Cai, Wenjia and Valentim, Carolina CS and Liang, Huiying and Baxter, Sally L and McKeown, Alex and Yang, Ge and Wu, Xiaokang and Yan, Fangbing and others},
+  journal={Cell},
+  volume={172},
+  number={5},
+  pages={1122--1131},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{zech2018confounding,
+  title={Confounding variables can degrade generalization performance of radiological deep learning models},
+  author={Zech, John R and Badgeley, Marcus A and Liu, Manway and Costa, Anthony B and Titano, Joseph J and Oermann, Eric K},
+  journal={arXiv preprint arXiv:1807.00431},
+  year={2018}
+}
+
+@inproceedings{du2017fused,
+  title={Fused DNN: A deep neural network fusion approach to fast and robust pedestrian detection},
+  author={Du, Xianzhi and El-Khamy, Mostafa and Lee, Jungwon and Davis, Larry},
+  booktitle={Applications of Computer Vision (WACV), 2017 IEEE Winter Conference on},
+  pages={953--961},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{graves2014towards,
+  title={Towards end-to-end speech recognition with recurrent neural networks},
+  author={Graves, Alex and Jaitly, Navdeep},
+  booktitle={International Conference on Machine Learning},
+  pages={1764--1772},
+  year={2014}
+}
+
+@article{hinton2012deep,
+  title={Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups},
+  author={Hinton, Geoffrey and Deng, Li and Yu, Dong and Dahl, George E and Mohamed, Abdel-rahman and Jaitly, Navdeep and Senior, Andrew and Vanhoucke, Vincent and Nguyen, Patrick and Sainath, Tara N and others},
+  journal={IEEE Signal processing magazine},
+  volume={29},
+  number={6},
+  pages={82--97},
+  year={2012},
+  publisher={IEEE}
+}
+
+
+
+
+%-----------------------------------------------------------
+% MISC
+
+@inproceedings{lipton2018detecting,
+  title={Detecting and Correcting for Label Shift with Black Box Predictors},
+  author={Lipton, Zachary C and Wang, Yu-Xiang and Smola, Alex},
+  booktitle={Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  year={2018}
+}
+
+@inproceedings{sanyal2018tapas,
+  title={TAPAS: Tricks to Accelerate (encrypted) Prediction As a Service},
+  author={Sanyal, Amartya and Kusner, Matt J and Gasc{\'o}n, Adri{\`a} and Kanade, Varun},
+  booktitle={Proceedings of the International Conference on Machine Learning (ICML)},
+  year={2018}
+}
+
+
+
+@book{martin2012large,
+  title={Large scale linear and integer optimization: a unified approach},
+  author={Martin, Richard Kipp},
+  year={2012},
+  publisher={Springer Science \& Business Media}
+}
+
+@article{dietvorst2016overcoming,
+  title={Overcoming algorithm aversion: People will use imperfect algorithms if they can (even slightly) modify them},
+  author={Dietvorst, Berkeley J and Simmons, Joseph P and Massey, Cade},
+  journal={Management Science},
+  volume={64},
+  number={3},
+  pages={1155--1170},
+  year={2016},
+  publisher={INFORMS}
+}
+
+@book{zhouhuman,
+  title={Human and Machine Learning},
+  author={Zhou, Jianlong and Chen, Fang},
+  publisher={Springer},
+  year={2018}
+}
+
+@article{fischhoff2014communicating,
+  title={Communicating scientific uncertainty},
+  author={Fischhoff, Baruch and Davis, Alex L},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={111},
+  number={Supplement 4},
+  pages={13664--13671},
+  year={2014},
+  publisher={National Acad Sciences}
+}
+
+@ARTICLE{10.3389/fpsyg.2018.00403,
+AUTHOR={Benjamin, Daniel M. and Budescu, David V.},   
+TITLE={The Role of Type and Source of Uncertainty on the Processing of Climate Models Projections},      
+JOURNAL={Frontiers in Psychology},      
+VOLUME={9},      
+PAGES={403},     
+YEAR={2018},      
+URL={https://www.frontiersin.org/article/10.3389/fpsyg.2018.00403},      
+DOI={10.3389/fpsyg.2018.00403},      
+ISSN={1664-1078},   
+}
+
+@article {Spiegelhalter1393,
+	author = {Spiegelhalter, David and Pearson, Mike and Short, Ian},
+	title = {Visualizing Uncertainty About the Future},
+	volume = {333},
+	number = {6048},
+	pages = {1393--1400},
+	year = {2011},
+	doi = {10.1126/science.1191181},
+	publisher = {American Association for the Advancement of Science},
+	abstract = {We are all faced with uncertainty about the future, but we can get the measure of some uncertainties in terms of probabilities. Probabilities are notoriously difficult to communicate effectively to lay audiences, and in this review we examine current practice for communicating uncertainties visually, using examples drawn from sport, weather, climate, health, economics, and politics. Despite the burgeoning interest in infographics, there is limited experimental evidence on how different types of visualizations are processed and understood, although the effectiveness of some graphics clearly depends on the relative numeracy of an audience. Fortunately, it is increasingly easy to present data in the form of interactive visualizations and in multiple types of representation that can be adjusted to user needs and capabilities. Nonetheless, communicating deeper uncertainties resulting from incomplete or disputed knowledge{\textemdash}or from essential indeterminacy about the future{\textemdash}remains a challenge.},
+	issn = {0036-8075},
+	URL = {http://science.sciencemag.org/content/333/6048/1393},
+	eprint = {http://science.sciencemag.org/content/333/6048/1393.full.pdf},
+	journal = {Science}
+}
+
+@article{doi:10.1177/0272989X07307271,
+author = {Isaac M. Lipkus},
+title ={Numeric, Verbal, and Visual Formats of Conveying Health Risks: Suggested Best Practices and Future Recommendations},
+journal = {Medical Decision Making},
+volume = {27},
+number = {5},
+pages = {696-713},
+year = {2007},
+doi = {10.1177/0272989X07307271},
+note ={PMID: 17873259},
+URL = { https://doi.org/10.1177/0272989X07307271
+},
+eprint = { https://doi.org/10.1177/0272989X07307271
+}
+}
+
+@article{thompson2015lay,
+  title={Lay understanding of forensic statistics: Evaluation of random match probabilities, likelihood ratios, and verbal equivalents.},
+  author={Thompson, William C and Newman, Eryn J},
+  journal={Law and human behavior},
+  volume={39},
+  number={4},
+  pages={332},
+  year={2015},
+  publisher={Educational Publishing Foundation}
+}
+
+@article{doi:10.1287/mnsc.39.2.176,
+author = {Wallsten, Thomas S. and Budescu, David V. and Zwick, Rami},
+title = {Comparing the Calibration and Coherence of Numerical and Verbal Probability Judgments},
+journal = {Management Science},
+volume = {39},
+number = {2},
+pages = {176-190},
+year = {1993},
+doi = {10.1287/mnsc.39.2.176},
+URL = {  https://doi.org/10.1287/mnsc.39.2.176},
+eprint = { https://doi.org/10.1287/mnsc.39.2.176 }
+,
+    abstract = { Despite the common reliance on numerical probability estimates in decision research and decision analysis, there is considerable interest in the use of verbal probability expressions to communicate opinion. A method is proposed for obtaining and quantitatively evaluating verbal judgments in which each analyst uses a limited vocabulary that he or she has individually selected and scaled. An experiment compared this method to standard numerical responding under three different payoff conditions. Response mode and payoff never interacted. Probability scores and their components were virtually identical for the two response modes and for all payoff groups. Also, judgments of complementary events were essentially additive under all conditions. The two response modes differed in that the central response category was used more frequently in the numerical than the verbal case, while overconfidence was greater verbally than numerically. Response distributions and degrees of overconfidence were also affected by payoffs. Practical and theoretical implications are discussed. }
+}
+
+@article{windschitl1996measuring,
+  title={Measuring psychological uncertainty: Verbal versus numeric methods.},
+  author={Windschitl, Paul D and Wells, Gary L},
+  journal={Journal of Experimental Psychology: Applied},
+  volume={2},
+  number={4},
+  pages={343},
+  year={1996},
+  publisher={American Psychological Association}
+}
+
+@article{ulkumen2016two,
+  title={Two dimensions of subjective uncertainty: Clues from natural language.},
+  author={{\"U}lk{\"u}men, G{\"u}lden and Fox, Craig R and Malle, Bertram F},
+  journal={Journal of Experimental Psychology: General},
+  volume={145},
+  number={10},
+  pages={1280},
+  year={2016},
+  publisher={American Psychological Association}
+}
+
+@article{martire2013psychology,
+  title={The psychology of interpreting expert evaluative opinions},
+  author={Martire, Kristy A and Kemp, Richard I and Newell, Ben R},
+  journal={Australian Journal of Forensic Sciences},
+  volume={45},
+  number={3},
+  pages={305--314},
+  year={2013},
+  publisher={Taylor \& Francis}
+}
+
+@incollection{BUDESCU1995275,
+title = "Processing Linguistic Probabilities: General Principles and Empirical Evidence",
+editor = "Jerome Busemeyer and Reid Hastie and Douglas L. Medin",
+series = "Psychology of Learning and Motivation",
+publisher = "Academic Press",
+volume = "32",
+pages = "275 - 318",
+year = "1995",
+issn = "0079-7421",
+doi = "https://doi.org/10.1016/S0079-7421(08)60313-8",
+url = "http://www.sciencedirect.com/science/article/pii/S0079742108603138",
+author = "David V. Budescu and Thomas S. Wallsten"
+}
+
+@Article{Dhami2005,
+author="Dhami, Mandeep K.
+and Wallsten, Thomas S.",
+title="Interpersonal comparison of subjective probabilities: Toward translating linguistic probabilities",
+journal="Memory {\&} Cognition",
+year="2005",
+month="Sep",
+day="01",
+volume="33",
+number="6",
+pages="1057--1068",
+abstract="Interpersonal variability in understanding linguistic probabilities can adversely affect decision making. Using the fact that everyone judges canonical probability events similarly in a manner consistent with axiom systems that yield a probability measure, we developed and tested a method for comparing the meanings of probability phrases across individuals. An experiment demonstrated that despite extreme heterogeneity in participants' linguistic probability lexicons, interpersonal similarity in phrase meaning is well predicted by phrase rank order within the lexicons. Thus, equally ranked phrases have similar meanings, and individual differences in linguistic probabilities may simply be explained by the phrases people use at each rank.",
+issn="1532-5946",
+doi="10.3758/BF03193213",
+url="https://doi.org/10.3758/BF03193213"
+}
+
+@article{budescu2012effective,
+  title={Effective communication of uncertainty in the IPCC reports},
+  author={Budescu, David V and Por, Han-Hui and Broomell, Stephen B},
+  journal={Climatic change},
+  volume={113},
+  number={2},
+  pages={181--200},
+  year={2012},
+  publisher={Springer}
+}
+
+@article{prahl2017understanding,
+  title={Understanding algorithm aversion: When is advice from automation discounted?},
+  author={Prahl, Andrew and Van Swol, Lyn},
+  journal={Journal of Forecasting},
+  volume={36},
+  number={6},
+  pages={691--702},
+  year={2017},
+  publisher={Wiley Online Library}
+}
+
+@article{GOODWIN2013354,
+title = "Antecedents and effects of trust in forecasting advice",
+journal = "International Journal of Forecasting",
+volume = "29",
+number = "2",
+pages = "354 - 366",
+year = "2013",
+issn = "0169-2070",
+doi = "https://doi.org/10.1016/j.ijforecast.2012.08.001",
+url = "http://www.sciencedirect.com/science/article/pii/S0169207012001124",
+author = "Paul Goodwin and M. Sinan Gönül and Dilek Önkal",
+keywords = "Judgmental forecasting, Advice, Stated trust, Adjusting forecasts"
+}
+
+@article{onkal2009relative,
+  title={The relative influence of advice from human experts and statistical methods on forecast adjustments},
+  author={{\"O}nkal, Dilek and Goodwin, Paul and Thomson, Mary and G{\"o}n{\"u}l, Sinan and Pollock, Andrew},
+  journal={Journal of Behavioral Decision Making},
+  volume={22},
+  number={4},
+  pages={390--409},
+  year={2009},
+  publisher={Wiley Online Library}
+}
+
+@article{budescu2003predicting,
+  title={Predicting the directionality of probability words from their membership functions},
+  author={Budescu, David V and Karelitz, Tzur M and Wallsten, Thomas S},
+  journal={Journal of Behavioral Decision Making},
+  volume={16},
+  number={3},
+  pages={159--180},
+  year={2003},
+  publisher={Wiley Online Library}
+}
+
+@article{gaut2017content,
+  title={Content coding of psychotherapy transcripts using labeled topic models},
+  author={Gaut, Garren and Steyvers, Mark and Imel, Zac E and Atkins, David C and Smyth, Padhraic},
+  journal={IEEE journal of biomedical and health informatics},
+  volume={21},
+  number={2},
+  pages={476--487},
+  year={2017},
+  publisher={IEEE}
+}
+
+@article{wallsten1997evaluating,
+  title={Evaluating and combining subjective probability estimates},
+  author={Wallsten, Thomas S and Budescu, David V and Erev, Ido and Diederich, Adele},
+  journal={Journal of Behavioral Decision Making},
+  volume={10},
+  number={3},
+  pages={243--268},
+  year={1997},
+  publisher={Wiley Online Library}
+}
+
+@article{turner2014forecast,
+  title={Forecast aggregation via recalibration},
+  author={Turner, Brandon M and Steyvers, Mark and Merkle, Edgar C and Budescu, David V and Wallsten, Thomas S},
+  journal={Machine learning},
+  volume={95},
+  number={3},
+  pages={261--289},
+  year={2014},
+  publisher={Springer}
+}
+
+@article {Koriat360,
+	author = {Koriat, Asher},
+	title = {When Are Two Heads Better than One and Why?},
+	volume = {336},
+	number = {6079},
+	pages = {360--362},
+	year = {2012},
+	doi = {10.1126/science.1216549},
+	publisher = {American Association for the Advancement of Science},
+	abstract = {A recent study, using a perceptual task, indicated that two heads were better than one provided that the members could communicate freely, presumably sharing their confidence in their judgments. Capitalizing on recent work on subjective confidence, I replicated this effect in the absence of any dyadic interaction by selecting on each trial the decision of the more confident member of a virtual dyad. However, because subjective confidence monitors the consensuality rather than the accuracy of a decision, when most participants were in error, reliance on the more confident member yielded worse decisions than those of the better individual. Assuming that for each issue group decisions are dominated by the more confident member, these results help specify when groups will be more or less accurate than individuals.},
+	issn = {0036-8075},
+	URL = {http://science.sciencemag.org/content/336/6079/360},
+	eprint = {http://science.sciencemag.org/content/336/6079/360.full.pdf},
+	journal = {Science}
+}
+
+%% from example_paper.bib for ICML
+
+@inproceedings{langley00,
+ author    = {P. Langley},
+ title     = {Crafting Papers on Machine Learning},
+ year      = {2000},
+ pages     = {1207--1216},
+ editor    = {Pat Langley},
+ booktitle     = {Proceedings of the 17th International Conference
+              on Machine Learning (ICML 2000)},
+ address   = {Stanford, CA},
+ publisher = {Morgan Kaufmann}
+}
+
+@TechReport{mitchell80,
+  author = 	 "T. M. Mitchell",
+  title = 	 "The Need for Biases in Learning Generalizations",
+  institution =  "Computer Science Department, Rutgers University",
+  year = 	 "1980",
+  address =	 "New Brunswick, MA",
+}
+
+@phdthesis{kearns89,
+  author = {M. J. Kearns},
+  title =  {Computational Complexity of Machine Learning},
+  school = {Department of Computer Science, Harvard University},
+  year =   {1989}
+}
+
+@Book{MachineLearningI,
+  editor = 	 "R. S. Michalski and J. G. Carbonell and T.
+		  M. Mitchell",
+  title = 	 "Machine Learning: An Artificial Intelligence
+		  Approach, Vol. I",
+  publisher = 	 "Tioga",
+  year = 	 "1983",
+  address =	 "Palo Alto, CA"
+}
+
+@Book{DudaHart2nd,
+  author =       "R. O. Duda and P. E. Hart and D. G. Stork",
+  title =        "Pattern Classification",
+  publisher =    "John Wiley and Sons",
+  edition =      "2nd",
+  year =         "2000"
+}
+
+
+@InCollection{Newell81,
+  author =       "A. Newell and P. S. Rosenbloom",
+  title =        "Mechanisms of Skill Acquisition and the Law of
+                  Practice", 
+  booktitle =    "Cognitive Skills and Their Acquisition",
+  pages =        "1--51",
+  publisher =    "Lawrence Erlbaum Associates, Inc.",
+  year =         "1981",
+  editor =       "J. R. Anderson",
+  chapter =      "1",
+  address =      "Hillsdale, NJ"
+}
+
+
+@Article{Samuel59,
+  author = 	 "A. L. Samuel",
+  title = 	 "Some Studies in Machine Learning Using the Game of
+		  Checkers",
+  journal =	 "IBM Journal of Research and Development",
+  year =	 "1959",
+  volume =	 "3",
+  number =	 "3",
+  pages =	 "211--229"
+}
+
+
+
+@article{marshall1998league,
+  title={League tables of in vitro fertilisation clinics: how confident can we be about the rankings},
+  author={Marshall, E Clare and Spiegelhalter, David J},
+  journal={BMJ},
+  volume={316},
+  pages={1701--1704},
+  year={1998}
+}
+
+@article{netzer2011reading,
+  title={Reading digits in natural images with unsupervised feature learning},
+  author={Netzer, Yuval and Wang, Tao and Coates, Adam and Bissacco, Alessandro and Wu, Bo and Ng, Andrew Y},
+  year={2011}
+}
+
+@article{tai_seale2016mhd,
+    title={Periodic Health Examinations and Missed Opportunities among Patients Likely Needing Mental Health Care},
+    volume={22},
+    number={10},
+    journal={ The American Journal of Managed Care },
+    author={Tai-Seale, Ming and Hatfield, Laura and Wilson, Caroline and Stults, Cheryl and McGuire, Thomas and Diamond, Lisa and Frankel, Richard and McLean, Lisa and Stone, Ashley and Lafata, Jennifer Elston and et al.},
+    year={2016},
+    month={Oct},
+    pages={e350–e357}
+}
+
+@inproceedings{he2016deep,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={770--778},
+  year={2016}
+}
+
+@article{hendrycks2019benchmarking,
+  title={Benchmarking neural network robustness to common corruptions and perturbations},
+  author={Hendrycks, Dan and Dietterich, Thomas},
+  journal={arXiv preprint arXiv:1903.12261},
+  year={2019}
+}
